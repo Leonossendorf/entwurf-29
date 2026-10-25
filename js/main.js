@@ -81,10 +81,14 @@
       });
     };
     radios.forEach(function (r) { r.addEventListener('change', zeig); });
-    var hash = location.hash.replace('#', '');
-    var vorwahl = form.querySelector('input[name="anliegen"][value="' + hash + '"]');
-    if (vorwahl) vorwahl.checked = true;
-    zeig();
+    var ausHash = function () {
+      var hash = location.hash.replace('#', '');
+      var vorwahl = form.querySelector('input[name="anliegen"][value="' + hash + '"]');
+      if (vorwahl) vorwahl.checked = true;
+      zeig();
+    };
+    window.addEventListener('hashchange', ausHash);
+    ausHash();
   });
 
   /* Demo-Formulare: verschicken nichts, prüfen nur den Rückweg und zeigen, was in der fertigen Seite passieren würde */
