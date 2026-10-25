@@ -20,7 +20,7 @@
     var setz = function (gross) {
       html.classList.toggle('schrift-gross', gross);
       schrift.setAttribute('aria-pressed', gross ? 'true' : 'false');
-      schrift.querySelector('.sr').textContent = gross ? 'Schrift wieder normal' : 'Schrift größer';
+      schrift.setAttribute('aria-label', gross ? 'AA: Schrift wieder normal' : 'AA: Schrift größer');
       try { localStorage.setItem('schrift', gross ? 'gross' : 'normal'); } catch (e) {}
     };
     setz(html.classList.contains('schrift-gross'));
