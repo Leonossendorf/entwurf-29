@@ -227,6 +227,19 @@ figcaption{font-size:.85rem;color:var(--tinte-2);margin-top:.4rem}
 .weiche[hidden]{display:none}
 .kurzform{padding:3rem 0}
 
+/* Team: Steckbriefe */
+.steckbriefe{list-style:none;padding:0;margin:0;display:grid;gap:1.1rem}
+@media (min-width:640px){.steckbriefe{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.steckbriefe{grid-template-columns:repeat(3,1fr)}}
+.steckbrief{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--radius);overflow:hidden;margin:0;display:flex;flex-direction:column}
+.steckbrief img,.steckbrief .platzhalter{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 20%;display:block}
+.steckbrief .platzhalter{background:var(--blau-hell);color:var(--blau-dunkel);display:grid;place-items:center;font-family:var(--serif);font-size:2.4rem;font-weight:600}
+.steckbrief-text{padding:1rem 1.2rem 1.2rem}
+.steckbrief h3{margin:0 0 .15rem;font-family:var(--serif);font-weight:600;font-size:1.15rem}
+.steckbrief .rolle{color:var(--tinte-2);margin:0 0 .6rem;font-size:.95rem}
+.steckbrief .beispiel{margin:0;font-size:.95rem;border-top:1px solid var(--linie);padding-top:.6rem}
+.marke-beispiel{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tinte-2);background:var(--flaeche-2);border-radius:4px;padding:.1rem .4rem;margin-right:.3rem;vertical-align:middle}
+
 /* Team */
 .personen{display:grid;gap:1rem}
 @media (min-width:600px){.personen{grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}}
