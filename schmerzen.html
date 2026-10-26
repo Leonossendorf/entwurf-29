@@ -89,8 +89,8 @@
     <div class="zwei">
       <div>
         <h2 id="kurzform-titel">Kurze Nachricht an die Praxis</h2>
-        <p>Sie möchten einen Termin, einen Rückruf oder haben eine Frage? Schreiben Sie uns, wir melden uns. Am schnellsten geht es telefonisch unter <a href="tel:+492557985808">02557 985808</a>.</p>
-        <p class="klein">Bitte beschreiben Sie hier keine Beschwerden oder Diagnosen. Das besprechen wir in Ruhe am Telefon oder in der Praxis.</p>
+        <p>Termin, Rückruf oder Frage: Schreiben Sie uns, wir melden uns. Am schnellsten: <a href="tel:+492557985808">02557 985808</a>.</p>
+        <p>Bitte keine Beschwerden oder Diagnosen eintragen, das besprechen wir persönlich.</p>
         <p><a href="kontakt.html" class="knopf knopf-leise">Alle Anfragen: Termin, Rückruf, Rezept, Erinnerung</a></p>
       </div>
       <form class="formular demo" data-bestaetigung="kurzform-ok" aria-describedby="kurzform-hinweis">
@@ -103,12 +103,12 @@
             <label class="chip"><input type="radio" name="kurz-anliegen" value="Frage">Frage</label>
           </div>
         </fieldset>
-        <div class="feld"><label for="kf-name">Name <span class="tipp">freiwillig</span></label><input id="kf-name" name="name" type="text" autocomplete="name"></div>
+        <div class="feld"><label for="kf-name">Name (Angabe optional)</label><input id="kf-name" name="name" type="text" autocomplete="name"></div>
         <div class="zwei-felder">
           <div class="feld"><label for="kf-tel">Telefon <span class="pflicht" aria-hidden="true">*</span></label><input id="kf-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
           <div class="feld"><label for="kf-mail">oder E-Mail <span class="pflicht" aria-hidden="true">*</span></label><input id="kf-mail" name="email" type="email" autocomplete="email" inputmode="email"></div>
         </div>
-        <div class="feld"><label for="kf-text">Nachricht <span class="tipp">freiwillig, bitte ohne Gesundheitsdaten</span></label><textarea id="kf-text" name="nachricht" rows="3"></textarea></div>
+        <div class="feld"><label for="kf-text">Nachricht (Angabe optional, bitte ohne Gesundheitsdaten)</label><textarea id="kf-text" name="nachricht" rows="3"></textarea></div>
         <button class="knopf" type="submit">Nachricht senden (Demo)</button>
         <p id="kurzform-hinweis" class="formular-hinweis"><span class="pflicht" aria-hidden="true">*</span> Telefon oder E-Mail genügt. Entwurf: Dieses Formular verschickt nichts.</p>
       </form>

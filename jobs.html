@@ -47,28 +47,27 @@
     <div class="abschnitt-kopf">
       <span class="ueberzeile">Mitarbeit</span>
       <h1>Arbeiten in der Zahnarztpraxis Breul</h1>
-      <p class="lead">Ein kleines Team, feste Sprechzeiten, kostenlose Parkplätze vor der Tür und Patientinnen und Patienten, die man mit Namen kennt. Wer so arbeiten möchte, ist hier richtig, ob mit Berufserfahrung, in der Ausbildung oder für ein Praktikum.</p>
+      <p class="lead">Kleines Team, feste Sprechzeiten, Parkplatz vor der Tür. Wählen Sie, was zu Ihnen passt, dann geht es direkt zur Kurzbewerbung.</p>
     </div>
     <h2 class="sr">Bereiche</h2>
     <div class="raster raster-4">
-      <div class="karte"><h3>Zahnmedizinische Fachangestellte (ZFA)</h3><p>Assistenz am Stuhl, Empfang, Organisation. Voll- oder Teilzeit, wie es zu Ihrem Leben passt.</p></div>
-      <div class="karte"><h3>Prophylaxe</h3><p>Professionelle Zahnreinigung, Beratung, Kinder- und Jugendprophylaxe. Mit oder ohne Fortbildung zur ZMP/ZMF.</p></div>
-      <div class="karte"><h3>Ausbildung zur ZFA</h3><p>Drei Jahre, Berufsschule plus Praxis. Ein Beruf mit Zukunft: Fachangestellte werden überall gesucht.</p></div>
-      <div class="karte"><h3>Praktikum</h3><p>Schülerpraktikum oder Schnuppertage, um den Beruf kennenzulernen. Einfach melden.</p></div>
+      <button class="karte karte-knopf" type="button" data-waehlt="stelle=ZFA" data-ziel="bewerbung"><h3>Zahnmedizinische Fachangestellte</h3><p>Assistenz, Empfang, Organisation. Voll- oder Teilzeit.</p><span class="weiter">Als ZFA bewerben</span></button>
+      <button class="karte karte-knopf" type="button" data-waehlt="stelle=Prophylaxe" data-ziel="bewerbung"><h3>Prophylaxe</h3><p>Zahnreinigung und Beratung, mit oder ohne Fortbildung zur ZMP/ZMF.</p><span class="weiter">Für Prophylaxe bewerben</span></button>
+      <button class="karte karte-knopf" type="button" data-waehlt="stelle=Ausbildung" data-ziel="bewerbung"><h3>Ausbildung zur ZFA</h3><p>Drei Jahre, Berufsschule und Praxis. Ein Beruf, der überall gesucht wird.</p><span class="weiter">Ausbildungsplatz anfragen</span></button>
+      <button class="karte karte-knopf" type="button" data-waehlt="stelle=Praktikum" data-ziel="bewerbung"><h3>Praktikum</h3><p>Schülerpraktikum oder Schnuppertage, um den Beruf kennenzulernen.</p><span class="weiter">Praktikum anfragen</span></button>
     </div>
-    <p class="klein" style="margin-top:1rem">Ob gerade eine Stelle frei ist, erfahren Sie telefonisch unter 02557 985808. Initiativbewerbungen sind jederzeit willkommen.</p>
+    <p style="margin-top:1rem">Ob gerade eine Stelle frei ist, erfahren Sie unter <a href="tel:+492557985808">02557 985808</a>. Initiativbewerbungen sind willkommen.</p>
   </div>
 </section>
 
-<section class="abschnitt abschnitt-hell" aria-labelledby="bewerbung-titel">
-  <div class="innen zwei">
+<section class="abschnitt abschnitt-hell" aria-labelledby="bewerbung-titel" id="bewerbung">
+  <div class="innen zwei" style="align-items:start">
     <div>
       <h2 id="bewerbung-titel">Kurzbewerbung in zwei Minuten</h2>
-      <p>Kein Anschreiben, kein Lebenslauf nötig. Sagen Sie uns, wofür Sie sich interessieren und wie wir Sie erreichen. Wir melden uns und laden Sie zum Kennenlernen ein.</p>
       <ol class="schritte" style="grid-template-columns:1fr">
-        <li><h3>Formular ausfüllen</h3><p>Dauert zwei Minuten, auch vom Handy.</p></li>
-        <li><h3>Wir rufen zurück</h3><p>In der Regel innerhalb weniger Tage.</p></li>
-        <li><h3>Kennenlernen in der Praxis</h3><p>Ein Nachmittag zum Hineinschnuppern, dann entscheiden beide Seiten.</p></li>
+        <li><h3>Formular ausfüllen</h3><p>Ohne Anschreiben, ohne Lebenslauf, auch vom Handy.</p></li>
+        <li><h3>Die Praxis meldet sich</h3><p>Telefonisch oder per E-Mail.</p></li>
+        <li><h3>Kennenlernen vor Ort</h3><p>Ein Nachmittag zum Hineinschnuppern.</p></li>
       </ol>
     </div>
     <div>
@@ -90,15 +89,15 @@
           <div class="feld"><label for="jb-mail">oder E-Mail <span class="pflicht" aria-hidden="true">*</span></label><input id="jb-mail" name="email" type="email" autocomplete="email" inputmode="email"></div>
         </div>
         <fieldset>
-          <legend>Wie viel möchten Sie arbeiten? <span class="tipp">freiwillig</span></legend>
+          <legend>Wie viel möchten Sie arbeiten? (Angabe optional)</legend>
           <div class="chips">
             <label class="chip"><input type="radio" name="umfang" value="Vollzeit">Vollzeit</label>
             <label class="chip"><input type="radio" name="umfang" value="Teilzeit">Teilzeit</label>
             <label class="chip"><input type="radio" name="umfang" value="offen">Noch offen</label>
           </div>
         </fieldset>
-        <div class="feld"><label for="jb-datei">Lebenslauf oder Zeugnis <span class="tipp">freiwillig, PDF oder Foto</span></label><input id="jb-datei" name="datei" type="file" accept=".pdf,image/*"></div>
-        <div class="feld"><label for="jb-text">Ein paar Sätze zu Ihnen <span class="tipp">freiwillig</span></label><textarea id="jb-text" name="text" rows="4"></textarea></div>
+        <div class="feld"><label for="jb-datei">Lebenslauf oder Zeugnis (Angabe optional, PDF oder Foto)</label><input id="jb-datei" name="datei" type="file" accept=".pdf,image/*"></div>
+        <div class="feld"><label for="jb-text">Ein paar Sätze zu Ihnen (Angabe optional)</label><textarea id="jb-text" name="text" rows="4"></textarea></div>
         <button class="knopf" type="submit">Bewerbung senden (Demo)</button>
         <p id="jobs-hinweis" class="formular-hinweis"><span class="pflicht" aria-hidden="true">*</span> Telefon oder E-Mail genügt. Entwurf: Dieses Formular verschickt nichts.</p>
       </form>

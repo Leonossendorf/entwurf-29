@@ -91,6 +91,21 @@
     ausHash();
   });
 
+  /* Kacheln als Knöpfe: wählen eine Option im Formular und scrollen dorthin */
+  document.querySelectorAll('[data-waehlt]').forEach(function (knopf) {
+    knopf.addEventListener('click', function () {
+      var teile = knopf.getAttribute('data-waehlt').split('=');
+      var feld = document.querySelector('input[name="' + teile[0] + '"][value="' + teile[1] + '"]');
+      if (!feld) return;
+      feld.checked = true;
+      feld.dispatchEvent(new Event('change', { bubbles: true }));
+      var ziel = document.getElementById(knopf.getAttribute('data-ziel')) || feld.closest('form');
+      var ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      ziel.scrollIntoView({ behavior: ruhig ? 'auto' : 'smooth', block: 'start' });
+      window.setTimeout(function () { feld.focus({ preventScroll: true }); }, ruhig ? 0 : 450);
+    });
+  });
+
   /* Demo-Formulare: verschicken nichts, prüfen nur den Rückweg und zeigen, was in der fertigen Seite passieren würde */
   document.querySelectorAll('form.demo').forEach(function (form) {
     form.setAttribute('novalidate', '');
